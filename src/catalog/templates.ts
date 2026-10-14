@@ -52,6 +52,20 @@ export const templates: TemplateMeta[] = [
       zh: "企业官网：分栏主视觉、可点时间线、手风琴服务、可筛选案例。",
     },
   },
+  {
+    slug: "bakery",
+    mark: "C",
+    swatch: "#2A1A12",
+    swatchInk: "#E8B86D",
+    preview:
+      "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80",
+    tags: { en: ["Ecommerce", "bakery"], zh: ["电商", "面包店"] },
+    title: { en: "Crumb & Co. — Bakery", zh: "Crumb & Co. — 面包店" },
+    description: {
+      en: "Simple bakery shop with product filters, quantity steppers, and WhatsApp checkout.",
+      zh: "简单面包店电商：产品筛选、数量选择，下单直连 WhatsApp。",
+    },
+  },
 ];
 
 export function getTemplate(slug: string) {
