@@ -82,7 +82,7 @@ export default function Home() {
       </main>
 
       <footer className="border-t border-zinc-100 px-6 py-8 text-center text-sm text-zinc-500">
-        © {new Date().getFullYear()} Your Product
+        © 2026 Your Product
       </footer>
     </div>
   );
