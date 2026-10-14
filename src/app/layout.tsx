@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Playfair_Display } from "next/font/google";
 import { Providers } from "@/components/providers";
+import { rootMetadata } from "@/lib/seo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,15 +14,21 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Pages — Website templates",
-  description: "Preview website templates and contact us on WhatsApp.",
+export const metadata: Metadata = rootMetadata;
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#eef0f3" },
+    { media: "(prefers-color-scheme: dark)", color: "#09090b" },
+  ],
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="zh-CN"
+      lang="en"
       className={`${geistSans.variable} ${playfair.variable} h-full antialiased`}
       suppressHydrationWarning
     >
