@@ -66,6 +66,20 @@ export const templates: TemplateMeta[] = [
       zh: "简单面包店电商：产品筛选、数量选择，下单直连 WhatsApp。",
     },
   },
+  {
+    slug: "fitness",
+    mark: "F",
+    swatch: "#0B0C10",
+    swatchInk: "#C9A227",
+    preview:
+      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    tags: { en: ["Fitness", "gym"], zh: ["健身", "健身房"] },
+    title: { en: "PeakFit — Fitness", zh: "PeakFit — 健身" },
+    description: {
+      en: "Gym landing with membership plans, member stories, FAQ accordion, and WhatsApp trial signup.",
+      zh: "健身房落地页：会员配套、会员故事、FAQ 手风琴，试练直连 WhatsApp。",
+    },
+  },
 ];
 
 export function getTemplate(slug: string) {
