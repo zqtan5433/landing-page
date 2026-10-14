@@ -319,7 +319,7 @@ export function FitnessTemplate() {
   const [openFaq, setOpenFaq] = useState(0);
 
   return (
-    <div className="min-h-screen bg-[#0b0c10] text-white">
+    <div className="min-h-screen bg-[#f3eee6] text-[#14151a] dark:bg-[#0b0c10] dark:text-white">
       <HeroSlider
         slides={t.slides.map((slide) => ({
           ...slide,
@@ -355,18 +355,28 @@ export function FitnessTemplate() {
         }
       />
 
-      <section id="about" className="bg-[#f3eee6] px-6 py-20 text-[#14151a]">
+      <section
+        id="about"
+        className="bg-white px-6 py-20 text-[#14151a] dark:bg-[#12141a] dark:text-white"
+      >
         <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-center">
           <div>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               {t.aboutTitle}
             </h2>
-            <p className="mt-4 leading-8 text-[#14151a]/70">{t.aboutBody}</p>
+            <p className="mt-4 leading-8 text-black/65 dark:text-white/65">
+              {t.aboutBody}
+            </p>
             <div className="mt-8 grid grid-cols-3 gap-4">
               {t.aboutPoints.map((point) => (
-                <div key={point.label} className="rounded-2xl bg-white p-4 shadow-sm">
+                <div
+                  key={point.label}
+                  className="rounded-2xl bg-[#f3eee6] p-4 dark:bg-white/5"
+                >
                   <p className="text-2xl font-bold text-[#c9a227]">{point.value}</p>
-                  <p className="mt-1 text-sm text-[#14151a]/55">{point.label}</p>
+                  <p className="mt-1 text-sm text-black/55 dark:text-white/55">
+                    {point.label}
+                  </p>
                 </div>
               ))}
             </div>
@@ -383,12 +393,15 @@ export function FitnessTemplate() {
         </div>
       </section>
 
-      <section id="product" className="bg-[#101218] px-6 py-20">
+      <section
+        id="product"
+        className="bg-[#f3eee6] px-6 py-20 dark:bg-[#101218]"
+      >
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
             {t.productTitle}
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-center text-white/60">
+          <p className="mx-auto mt-3 max-w-2xl text-center text-black/60 dark:text-white/60">
             {t.productBody}
           </p>
           <div className="mt-12 grid gap-5 lg:grid-cols-3">
@@ -398,7 +411,7 @@ export function FitnessTemplate() {
                 className={`relative rounded-3xl border p-6 ${
                   plan.popular
                     ? "border-[#c9a227] bg-[#c9a227] text-[#0b0c10]"
-                    : "border-white/10 bg-white/5"
+                    : "border-black/10 bg-white text-[#14151a] dark:border-white/10 dark:bg-white/5 dark:text-white"
                 }`}
               >
                 {plan.popular ? (
@@ -441,19 +454,22 @@ export function FitnessTemplate() {
         </div>
       </section>
 
-      <section id="portfolio" className="bg-[#f3eee6] px-6 py-20 text-[#14151a]">
+      <section
+        id="portfolio"
+        className="bg-white px-6 py-20 text-[#14151a] dark:bg-[#12141a] dark:text-white"
+      >
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
             {t.portfolioTitle}
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-center text-[#14151a]/65">
+          <p className="mx-auto mt-3 max-w-2xl text-center text-black/65 dark:text-white/65">
             {t.portfolioBody}
           </p>
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {t.stories.map((story) => (
               <article
                 key={story.name}
-                className="overflow-hidden rounded-[1.5rem] bg-white shadow-sm"
+                className="overflow-hidden rounded-[1.5rem] bg-[#f3eee6] shadow-sm dark:bg-white/5"
               >
                 <div className="relative aspect-[5/4]">
                   <Image
@@ -466,11 +482,13 @@ export function FitnessTemplate() {
                 </div>
                 <div className="p-5">
                   <p className="text-[#c9a227]">★★★★★</p>
-                  <p className="mt-3 text-sm leading-7 text-[#14151a]/80">
+                  <p className="mt-3 text-sm leading-7 text-black/80 dark:text-white/80">
                     “{story.quote}”
                   </p>
                   <p className="mt-4 font-semibold">{story.name}</p>
-                  <p className="text-sm text-[#14151a]/55">{story.meta}</p>
+                  <p className="text-sm text-black/55 dark:text-white/55">
+                    {story.meta}
+                  </p>
                 </div>
               </article>
             ))}
@@ -478,15 +496,18 @@ export function FitnessTemplate() {
         </div>
       </section>
 
-      <section id="faq" className="bg-[#101218] px-6 py-20">
+      <section
+        id="faq"
+        className="bg-[#f3eee6] px-6 py-20 dark:bg-[#101218]"
+      >
         <div className="mx-auto max-w-3xl">
           <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
             {t.faqTitle}
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-white/60">
+          <p className="mx-auto mt-3 max-w-xl text-center text-black/60 dark:text-white/60">
             {t.faqBody}
           </p>
-          <div className="mt-10 divide-y divide-white/10 border border-white/10">
+          <div className="mt-10 divide-y divide-black/10 border border-black/10 bg-white dark:divide-white/10 dark:border-white/10 dark:bg-transparent">
             {t.faqs.map((item, index) => {
               const isOpen = openFaq === index;
               return (
@@ -497,10 +518,12 @@ export function FitnessTemplate() {
                     className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left"
                   >
                     <span className="font-semibold">{item.q}</span>
-                    <span className="text-xl text-[#c9a227]">{isOpen ? "−" : "+"}</span>
+                    <span className="text-xl text-[#c9a227]">
+                      {isOpen ? "−" : "+"}
+                    </span>
                   </button>
                   {isOpen ? (
-                    <p className="px-5 pb-5 text-sm leading-7 text-white/65">
+                    <p className="px-5 pb-5 text-sm leading-7 text-black/65 dark:text-white/65">
                       {item.a}
                     </p>
                   ) : null}
@@ -511,7 +534,10 @@ export function FitnessTemplate() {
         </div>
       </section>
 
-      <section id="contact" className="bg-[#f3eee6] px-6 py-20 text-[#14151a]">
+      <section
+        id="contact"
+        className="bg-white px-6 py-20 text-[#14151a] dark:bg-[#12141a] dark:text-white"
+      >
         <div className="mx-auto max-w-6xl">
           <ContactPanel
             title={t.contactTitle}
@@ -524,23 +550,23 @@ export function FitnessTemplate() {
             buildMessage={(name, message) =>
               `${t.inquire}\n\nName: ${name}\nMessage: ${message || "-"}`
             }
-            className="rounded-[2rem] bg-white p-8"
+            className="rounded-[2rem] bg-[#f3eee6] p-8 dark:bg-[#0b0c10]"
             buttonClassName="bg-[#c9a227] text-[#0b0c10]"
           />
         </div>
       </section>
 
-      <footer className="border-t border-white/10 bg-[#0b0c10] px-6 py-10">
+      <footer className="border-t border-black/10 bg-[#f3eee6] px-6 py-10 dark:border-white/10 dark:bg-[#0b0c10]">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <span className="font-bold tracking-tight">{t.brand}</span>
-          <div className="flex flex-wrap gap-5 text-sm text-white/50">
+          <div className="flex flex-wrap gap-5 text-sm text-black/50 dark:text-white/50">
             {t.footerLinks.map((link) => (
               <a key={link} href="#product">
                 {link}
               </a>
             ))}
           </div>
-          <p className="text-sm text-white/45">{t.footer}</p>
+          <p className="text-sm text-black/45 dark:text-white/45">{t.footer}</p>
         </div>
       </footer>
     </div>
